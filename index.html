@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Questrial|Syncopate" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <!-- <meta http-equiv="refresh" content="3"> -->
+</head>
+
+<body>
+    <header>
+        <h1>Hi There !</h1>
+        <h3>Tell us</h3>
+        <h3>what you think </h3>
+    </header>
+
+
+    <form id="my-form">
+        <div id="phase1">
+            <div class="inner-content">
+                <h2>Phase I</h2>
+                <label class="block" id="user-email-label" for="user-email">Email :</label>
+                <input class="block" id="user-email" name="userEmail" placeholder="something@gmail.com" type="email" required></input>
+                <label class="block" id="user-pass-label" for="user-pass">Password :</label>
+                <input class="block" id="user-pass" name="userPass" placeholder="insert your password" type="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"></input>
+                <label class="block" id="user-pass1-label" for="user-pass1">Retype Password :</label>
+                <input class="block" id="user-pass1" name="userPass1" placeholder="insert your password again" type="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"></input>
+            </div>
+        </div>
+        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+        <div id="phase2">
+            <div class="inner-content">
+                <h2>Phase II</h2>
+                <div class="block">
+                    <label id="age-label" for="age" class="block">Age :</label>
+                    <input id="age" name="userAge" placeholder="your age" type="number" required min="18"></input>
+                </div>
+
+                <div class="flex-container">
+
+
+                    <fieldset id="family-status">
+                        <legend>Family Status</legend>
+                        <div>
+                            <input id="family-statusM" type="radio" name="family-status" value="M" checked>
+                            <label id="family-status-labelM" for="family-statusM">Maried</label>
+                        </div>
+                        <div>
+                            <input id="family-statusS" type="radio" name="family-status" value="S" checked>
+                            <label id="family-status-labelS" for="family-statusS">Single</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="hobbies">
+                        <legend>Hobbies</legend>
+                        <div class="checkbox-btn">
+                            <input id="hobbies1" type="checkbox" name="hobbies" value="Sport">
+                            <label id="hobbies-label1" for="hobbies1">Sport</label>
+                        </div>
+
+                        <div class="checkbox-btn">
+                            <input id="hobbies2" type="checkbox" name="hobbies" value="Swim">
+                            <label id="hobbies-label2" for="hobbies2">Swim</label>
+                        </div>
+
+                        <div class="checkbox-btn">
+                            <input id="hobbies3" type="checkbox" name="hobbies" value="Run">
+                            <label id="hobbies-label3" for="hobbies3">Run</label>
+                        </div>
+
+
+                        <div class="checkbox-btn">
+                            <input id="hobbies5" type="checkbox" name="hobbies" value="Dogs">
+                            <label id="hobbies-label5" for="hobbies5">Dogs</label>
+                        </div>
+
+                        <div class="checkbox-btn">
+                            <input id="hobbies6" type="checkbox" name="hobbies" value="Cats">
+                            <label id="hobbies-label6" for="hobbies6">Cats</label>
+                        </div>
+
+                        <div class="checkbox-btn">
+                            <input id="hobbies7" type="checkbox" name="hobbies" value="Snakes">
+                            <label id="hobbies-label7" for="hobbies7">Snakes</label>
+                        </div>
+
+                        <div class="checkbox-btn">
+                            <input id="hobbies8" type="checkbox" name="hobbies" value="Hike">
+                            <label id="hobbies-label8" for="hobbies8">Hike</label>
+                        </div>
+
+                        <div class="checkbox-btn">
+                            <input id="hobbies9" type="checkbox" name="hobbies" value="Travel">
+                            <label id="hobbies-label9" for="hobbies9">Travel</label>
+                        </div>
+                        <div class="checkbox-btn">
+                            <input id="hobbies10" type="checkbox" name="hobbies" value="Work">
+                            <label id="hobbies-label10" for="hobbies10">Work</label>
+                        </div>
+                        <div class="checkbox-btn">
+                            <input id="hobbies11" type="checkbox" name="hobbies" value="Sleep">
+                            <label id="hobbies-label11" for="hobbies11">Sleep</label>
+                        </div>
+                        <div class="checkbox-btn">
+                            <input id="hobbies12" type="checkbox" name="hobbies" value="Ride">
+                            <label id="hobbies-label12" for="hobbies12">Ride</label>
+                        </div>
+                        <div class="checkbox-btn">
+                            <input id="hobbies13" type="checkbox" name="hobbies" value="cooking">
+                            <label id="hobbies-label13" for="hobbies13">Cooking</label>
+                        </div>
+
+                    </fieldset>
+                </div>
+                <input type="hidden" id="" name="publisher" value="W24LCH">
+            </div>
+        </div>
+        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+        <div id="phase3">
+            <div class="inner-content">
+                <h2>Phase III</h2>
+                <div>
+                    <div>
+                        <label class="block" id="profile-file-label" for="profile-file">Profile Image
+                        </label>
+                        <p>
+                            <strong> (Change Me!) </strong>
+                        </p>
+                        <img id="user-image" class="block" src="https://res.cloudinary.com/demo/image/facebook/w_100,h_100,c_fill,d_avatar2.png/non_existing_id.jpg">
+                        <input class="center" id="profile-img" onchange="UploadImage()" type="file" name="profile-file">
+
+
+                    </div>
+                    <div>
+                        <label class="block" id="tell-more-label" for="tell-more">Tell Us More</label>
+                        <textarea id="tell-more" placeholder="Tell us about you ..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+        <div id="phase4">
+            <div class="inner-content">
+                <input class="action-btn" type="reset" value="Reset">
+                <input class="action-btn" type="submit" value="Send">
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
