@@ -37,14 +37,16 @@ div[id*="phase"] {
     font-size: 16px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-bottom: 2px;
 }
 .inner-content p{    
     padding: 0px;
     margin: 0px;
 }
-.inner-content input{
-    background-color: rgb(162, 255, 255);
+.inner-content input ,.inner-content select {
+    background-color: rgb(222, 252, 252);
     border-radius: 10px;
+    padding :5px;
     font-family: 'Questrial', sans-serif;
 }
 
@@ -102,6 +104,9 @@ div[id*="phase"] {
 .block{
     display: block;
 }
+.inline-block{
+    display: inline-block;
+}
 label{
     text-align: center;
     
@@ -111,8 +116,9 @@ fieldset{
     
     border-radius: 20px;
     text-align: center;
-    margin:10px;
-    padding:5px;            
+    margin:5px;
+    padding:5px;    
+    font-size: 14px;        
 }
 .flex-container{
     padding: 20px;
@@ -126,13 +132,13 @@ fieldset{
     width:30%;
 }
 #hobbies{
-    width:70%;
+    width:300px;
     
 }
 #hobbies>.checkbox-btn{
     /* background-color: rgb(14, 31, 4); */
     display: inline-block;
-    width:100px;
+    width:80px;
     text-align: left; 
 }
 
@@ -169,6 +175,13 @@ header {
     left:20px;
     
 }
+
+#dropdown{
+    border-radius: 10px;
+    border :0.5px solid red;
+    padding: 5px;
+}
+
  /* --------------------- validation tests---------------------------------  */
 
 /* input:required:invalid, input:focus:invalid { */
@@ -192,4 +205,7 @@ header {
         color: red;
         border:0.5px solid red;
       }
-    
+      number:required:invalid{
+        color: red;
+        border:0.5px solid red;
+      }

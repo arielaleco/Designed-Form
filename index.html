@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Questrial|Syncopate" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -11,18 +12,19 @@
 
 <body>
     <header>
-        <h1>Hi There !</h1>
+        <h1 id="title">Hi There !</h1>
         <h3>Tell us</h3>
         <h3>what you think </h3>
+        <p id="description">Thank you</p>
     </header>
 
 
-    <form id="my-form">
+    <form id="survey-form">
         <div id="phase1">
             <div class="inner-content">
                 <h2>Phase I</h2>
-                <label class="block" id="user-email-label" for="user-email">Email :</label>
-                <input class="block" id="user-email" name="userEmail" placeholder="something@gmail.com" type="email" required></input>
+                <label class="block" id="email-label" for="email">Email :</label>
+                <input class="block" id="email" name="userEmail" placeholder="something@gmail.com" type="email" required></input>
                 <label class="block" id="user-pass-label" for="user-pass">Password :</label>
                 <input class="block" id="user-pass" name="userPass" placeholder="insert your password" type="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"></input>
                 <label class="block" id="user-pass1-label" for="user-pass1">Retype Password :</label>
@@ -34,10 +36,23 @@
         <div id="phase2">
             <div class="inner-content">
                 <h2>Phase II</h2>
-                <div class="block">
-                    <label id="age-label" for="age" class="block">Age :</label>
-                    <input id="age" name="userAge" placeholder="your age" type="number" required min="18"></input>
+                <div class="inline-block">
+                    <label id="number-label" for="number" class="block">Age :</label>
+                    <input id="number" name="user age" placeholder="your age" type="number" required min="18" max="500"></input>
                 </div>
+                <div class="inline-block">
+                    <label id="name-label" for="name" class="block">Name :</label>
+                    <input id="name" name="user Name" placeholder="your Name" type="text" required></input>
+                </div>
+                <div class="block inner-content">
+                        <label class="block" id="dropdown-label" for="dropdown">Favorite Hero</label>
+                        <select id="dropdown">
+                            <option value="superman">Superman</option>
+                            <option value="batman">Batman</option>
+                            <option value="wonder-woman">Wonderwoman</option>
+                            <option value="shreck">Shreck</option>
+                        </select>
+                    </div>
 
                 <div class="flex-container">
 
@@ -114,7 +129,9 @@
                         </div>
 
                     </fieldset>
+
                 </div>
+               
                 <input type="hidden" id="" name="publisher" value="W24LCH">
             </div>
         </div>
@@ -145,7 +162,7 @@
         <div id="phase4">
             <div class="inner-content">
                 <input class="action-btn" type="reset" value="Reset">
-                <input class="action-btn" type="submit" value="Send">
+                <input id="submit" class="action-btn" type="submit" value="Send">
             </div>
         </div>
     </form>
